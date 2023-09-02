@@ -21,8 +21,10 @@ import { UserAvatar } from "@/components/User-Avatar";
 import { BotAvatar } from "@/components/Bot-Avatar";
 import { Code, Divide } from "lucide-react";
 import ReactMarkdown from "react-markdown"
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const CodePage = () => {
+    const proModal = useProModal()
     const router = useRouter();
     const [messages, setMessages] = useState<OpenAI.Chat.Completions.CreateChatCompletionRequestMessage[]>([])
 
@@ -53,7 +55,9 @@ const CodePage = () => {
         form.reset()
 
         } catch (error: any) {
-            console.log(error)
+            if (error?.response?.status === 403){
+                proModal.onOpen();
+            }
         } finally {
             router.refresh();
         }
