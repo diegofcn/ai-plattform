@@ -106,9 +106,6 @@ const ConversationPage = () => {
                             <Loader />
                         </div>
                     )}
-                    {messages.length === 0 && !isLoading && ( 
-                       <Empty label="No conversation started"/>
-                    )}
                     <div className="flex flex-col-reverse gap-y-4">
                         {messages.map((message) => (
                             <div 
