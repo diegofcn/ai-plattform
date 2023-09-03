@@ -78,6 +78,7 @@ const ImagePage = () => {
                 className="
                   rounded-lg 
                   border 
+                  bg-white
                   w-full 
                   p-4 
                   px-3 

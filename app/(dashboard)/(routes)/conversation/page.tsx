@@ -80,7 +80,7 @@ const ConversationPage = () => {
                 <div>
                     <Form {...form}>
                         <form onSubmit={form.handleSubmit(onSubmit)}
-                        className="rounded-lg border w-full p-4 px-3 md:px-6 focus-within:shadow-sm grid grid-cols-12 gap-2"
+                        className="rounded-lg border bg-white w-full p-4 px-3 md:px-6 focus-within:shadow-sm grid grid-cols-12 gap-2"
                         >
                             <FormField name="prompt" render={({ field }) => (
                                 <FormItem className="col-span-12 lg:col-span-10">
@@ -114,8 +114,7 @@ const ConversationPage = () => {
                                     {message.role === "user" ? <UserAvatar /> : <BotAvatar />}
                                     <p className="text-sm">
                                     {message.content}
-                                    </p>
-                                   
+                                    </p>  
                             </div>
                         ))}
 

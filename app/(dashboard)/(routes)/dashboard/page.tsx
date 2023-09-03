@@ -54,10 +54,10 @@ const DashboardPage = () => {
     <div>
     <div className="mb-8 space-y-4">
       <h2 className="text-2xl md:text-4xl font-bold text-center text-[#283618]">
-        Explore the power of AI
+        Use AI for productivity
       </h2>
       <p className="text-muted-foreground text-sm md:text-lg text-[#BC6C25] text-center">
-        Lets build things using AI!
+        Lets build things!
         </p>
     </div>
     <div className="px-4 md:px-20 lg:px-32 space-y-4">
